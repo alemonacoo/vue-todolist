@@ -12,14 +12,16 @@
 <body>
    <div id="app">
     <h1>To Do List</h1>
-    <input type="text" v-model="toDoItem">
+    <input type="text" v-model="toDoItem" @keyup.enter="addToDoItem(toDoItem)">
     <input type="button" value="Aggiungi" @click="addToDoItem(toDoItem)">
     <div class="list-container">
         <ul v-for="item in toDoList">
             <li>
                <div :class="[item.status === true ? 'cross' : '']"> {{ item.nome }} </div>
                 <input type="checkbox" id="checkbox" @click="changeStatus(item)" />
+                <input type="button" value="Remove" @click="removeToDoItem(item)" >
             </li>
+
         </ul>
     </div>
     

@@ -2,18 +2,18 @@ console.log("JS OK!");
 
 
 const toDoList = [
-    {
-        nome: 'prova1',
-        status: false,
-    },
-    {
-        nome: 'prova2',
-        status: false,
-    },
-    {
-        nome: 'prova3',
-        status: false,
-    }
+    // {
+    //     nome: 'prova1',
+    //     status: false,
+    // },
+    // {
+    //     nome: 'prova2',
+    //     status: false,
+    // },
+    // {
+    //     nome: 'prova3',
+    //     status: false,
+    // }
 ];
 
 console.log(toDoList);
@@ -37,12 +37,9 @@ const app = new Vue(
                 this.toDoItem = '';
                 console.log(this.toDoList);
 
-            },
-            isChecked(bool){
-                if(bool == false){
-                    return "cross";
-                }
-                else return '';
+            }, 
+            removeToDoItem(item){
+                this.toDoList.splice(item, 1);
             },
             changeStatus(item){
                 item.status = !item.status;
