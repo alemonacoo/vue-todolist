@@ -15,9 +15,10 @@
     <input type="text" v-model="toDoItem">
     <input type="button" value="Aggiungi" @click="addToDoItem(toDoItem)">
     <div class="list-container">
-        <ul v-for="(item, index) in toDoList.listArray">
-            <li> <div :class="[isComplete(index)]">  {{ item }} </div>
-                 <div> <input type="checkbox" @click="isComplete(index)"></div>                
+        <ul v-for="item in toDoList">
+            <li>
+               <div :class="[item.status === true ? 'cross' : '']"> {{ item.nome }} </div>
+                <input type="checkbox" id="checkbox" @click="changeStatus(item)" />
             </li>
         </ul>
     </div>
