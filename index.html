@@ -15,8 +15,10 @@
     <input type="text" v-model="toDoItem">
     <input type="button" value="Aggiungi" @click="addToDoItem(toDoItem)">
     <div class="list-container">
-        <ul v-for="(item) in toDoListArray">
-            <li>{{ item }}</li>
+        <ul v-for="(item, index) in toDoList.listArray">
+            <li> <div :class="[isComplete(index)]">  {{ item }} </div>
+                 <div> <input type="checkbox" @click="isComplete(index)"></div>                
+            </li>
         </ul>
     </div>
     

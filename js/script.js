@@ -1,22 +1,36 @@
 console.log("JS OK!");
 
-const toDoListArray = [];
+const toDoList = {
+    listArray: ['prova', 'ciccio'],
+    statusArray:[false, true]
+};
 
-console.log(toDoListArray);
+console.log(toDoList);
 
 const app = new Vue(
     {
         el: "#app",
         data:{
-            toDoListArray,
-            toDoItem: undefined,
+            toDoList,
+            toDoItem: undefined
         },
         methods:{
             addToDoItem(item){
-                toDoListArray.push(item);
-                console.log(toDoListArray);
+                this.toDoList.listArray.push(item);
                 this.toDoItem = '';
+                this.toDoList.statusArray.push(false);
+                console.log(this.toDoList.listArray, this.toDoList.statusArray);
+
             },
+            isComplete(index){
+                if(this.toDoList.statusArray[index] === true){
+                    this.toDoList.statusArray[index] = false;
+                } else{
+                    this.toDoList.statusArray[index] = true;
+                }
+                console.log(this.toDoList.statusArray[index]);
+            }
+
         }
 
     }
