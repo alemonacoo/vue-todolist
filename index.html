@@ -15,13 +15,15 @@
     <input type="text" v-model="toDoItem" @keyup.enter="addToDoItem(toDoItem)">
     <input type="button" value="Aggiungi" @click="addToDoItem(toDoItem)">
     <div class="list-container">
-        <ul v-for="item in toDoList">
-            <li>
+        <ul>
+            <li v-for="item in toDoList">
                <div :class="[item.status === true ? 'cross' : '']"> {{ item.nome }} </div>
+               <div>
+                <label for="checkbox"> Completato </label>
                 <input type="checkbox" id="checkbox" @click="changeStatus(item)" />
-                <input type="button" value="Remove" @click="removeToDoItem(item)" >
+            </div>
+                <input type="button" value="Rimuovi" @click="removeToDoItem(item)" >
             </li>
-
         </ul>
     </div>
     

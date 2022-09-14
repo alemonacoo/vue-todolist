@@ -1,3 +1,20 @@
 .cross{
     text-decoration: line-through;
 }
+
+ul{
+    padding: 0;
+    border: solid black 1px;
+}
+
+li{
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+
+}

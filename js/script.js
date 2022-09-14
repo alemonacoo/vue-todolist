@@ -2,18 +2,18 @@ console.log("JS OK!");
 
 
 const toDoList = [
-    // {
-    //     nome: 'prova1',
-    //     status: false,
-    // },
-    // {
-    //     nome: 'prova2',
-    //     status: false,
-    // },
-    // {
-    //     nome: 'prova3',
-    //     status: false,
-    // }
+    {
+        nome: 'prova1',
+        status: false,
+    },
+    {
+        nome: 'prova2',
+        status: false,
+    },
+    {
+        nome: 'prova3',
+        status: false,
+    }
 ];
 
 console.log(toDoList);
