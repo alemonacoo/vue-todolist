@@ -20,7 +20,7 @@
                <div :class="[item.status ? 'cross' : '']"> {{ item.nome }} </div>
                <div>
                 <label for="checkbox"> Completato </label>
-                <input type="checkbox" id="checkbox" @click="changeStatus(item)"/>
+                <input type="checkbox" id="checkbox"  v-model="item.status" />
             </div>
                 <input type="button" value="Rimuovi" @click="removeToDoItem(item)" >
             </li>

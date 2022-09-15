@@ -20,10 +20,11 @@ console.log(toDoList);
 
 const app = new Vue(
     {
-        el: "#app",
+        el: "#app", 
         data:{
             toDoList,
             toDoItem: undefined,
+
         },
         methods:{
             addToDoItem(item){
@@ -43,13 +44,6 @@ const app = new Vue(
                 this.toDoList = newToDo;
                 console.log(newToDo);
             },
-            changeStatus(item){
-                item.status = !item.status;
-                console.log(item);
-                console.log(toDoList);
-            }
-        }
-
-           
+        }           
     }
 )
