@@ -38,11 +38,14 @@ const app = new Vue(
                 console.log(this.toDoList);
 
             }, 
-            removeToDoItem(item){
-                this.toDoList.splice(item, 1);
+            removeToDoItem(item){     
+                let newToDo = this.toDoList.filter(i => i !== item);
+                this.toDoList = newToDo;
+                console.log(newToDo);
             },
             changeStatus(item){
                 item.status = !item.status;
+                console.log(item);
                 console.log(toDoList);
             }
         }

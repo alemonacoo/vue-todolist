@@ -17,10 +17,10 @@
     <div class="list-container">
         <ul>
             <li v-for="item in toDoList">
-               <div :class="[item.status === true ? 'cross' : '']"> {{ item.nome }} </div>
+               <div :class="[item.status ? 'cross' : '']"> {{ item.nome }} </div>
                <div>
                 <label for="checkbox"> Completato </label>
-                <input type="checkbox" id="checkbox" @click="changeStatus(item)" />
+                <input type="checkbox" id="checkbox" @click="changeStatus(item)"/>
             </div>
                 <input type="button" value="Rimuovi" @click="removeToDoItem(item)" >
             </li>
